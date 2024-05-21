@@ -1,4 +1,4 @@
-package collection;
+package collection.task1;
 
 import java.util.LinkedList;
 
