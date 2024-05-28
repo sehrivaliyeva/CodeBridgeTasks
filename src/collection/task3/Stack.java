@@ -1,5 +1,6 @@
 package collection.task3;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Stack {
@@ -49,7 +50,11 @@ public class Stack {
     }
 
     public int pop() {
-        return stackArray[top--];
+        if (isEmpty()) {
+            return -1;
+        } else {
+            return stackArray[top--];
+        }
     }
 
 
@@ -71,6 +76,9 @@ public class Stack {
 
 
     public int peek() {
+        if (isEmpty()) {
+            return -1;
+        }
         return stackArray[top];
     }
 
