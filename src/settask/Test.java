@@ -8,7 +8,6 @@ public class Test {
     String name;
     Set<String> set = new HashSet<>();
 
-
     public void methodAdd() {
         System.out.println("Elementleri daxil edin : ");
 
