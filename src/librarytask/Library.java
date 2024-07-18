@@ -7,14 +7,14 @@ import java.util.Map;
 
 public class Library {
 
-    private Catalog catalog = new Catalog();
+     Catalog catalog = new Catalog();
 
-    private MemberShip memberShip = new MemberShip();
+     MemberShip memberShip = new MemberShip();
 
-    private List<Transaction> transactions = new ArrayList<>();
+    List<Transaction> transactions = new ArrayList<>();
 
 
-    public void borrowBooks(String memberId, String isbn) {
+    public void borrowBook(String memberId, String isbn) {
         Member member = memberShip.searchMember(memberId);
         Book book = catalog.searchBook(isbn);
         if (member != null && book != null && !book.isBorrowed()) {
@@ -81,7 +81,9 @@ public class Library {
 
 
         public void addBook(String title, String author, String isbn) {
+
             booksCatalog.put(isbn, new Book(title, isbn, author));
+            System.out.println(" success");
         }
 
         public void removeBookCatalog(String isbn) {

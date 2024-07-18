@@ -63,6 +63,8 @@ public class Member {
             book.setBorrowed(false);
             borrowedBooks.remove(book);
             System.out.println("Book successfully remove borrowed list ");
+        }else {
+            System.out.println("This book not borrowed by yourself !");
         }
     }
 
