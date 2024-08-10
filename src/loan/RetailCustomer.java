@@ -8,7 +8,7 @@ public class RetailCustomer extends Customer implements DiscountService {
 
     @Override
     public double discountForLoanComission(Loan loan) {
-        double result = loan.getComission() - (loan.getComission() * 2 / 100);
+        double result = loan.getComission() - (loan.getAmount() * 2 / 100);
         System.out.println("yekun komissiya : " + result);
         return result;
     }
